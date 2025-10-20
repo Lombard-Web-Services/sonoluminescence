@@ -8,8 +8,6 @@ Ce projet explore un **cadre théorique original** reliant la **sonoluminescence
 
 Le document propose une **signature thermodynamique** de la lumière : la température du plasma émetteur est liée à la pénalité Fisher imposée pour régulariser le collapse, évitant ainsi les singularités non physiques.
 
-> 📌 **Note** : Ce rapport est conceptuel et non expérimental. Il synthétise des idées issues de l’interaction avec plusieurs IA (Qwen, Grok, Gemini, ChatGPT, Perplexity) et les structure en un modèle cohérent.
-
 ---
 
 ## ⚙️ Génération automatique
@@ -31,7 +29,7 @@ Ce script :
 
 ## 📥 Télécharger le PDF
 
-➡️ [**sonoluminescence.pdf**](output/sonoluminescence.pdf) *(généré à la dernière exécution)*
+➡️ [**sonoluminescence.pdf**](https://raw.githubusercontent.com/Lombard-Web-Services/sonoluminescence/main/output/sonoluminescence.pdf)
 
 ---
 
@@ -61,12 +59,12 @@ Le document inclut une **section détaillée (Section 4)** pour reproduire la so
 Ce document est distribué sous **[MIT License](LICENSE)**.  
 © 2025 Thibaut Lombard — Project Manager & Machine Learning Engineer @ Lombard-Web-Services
 
-> ⚠️ À usage **informationnel uniquement**. Ne constitue pas une théorie établie.
+>  À usage **informationnel, ou pédagogique.**. 
 
 ---
 
 ## 📬 Contact
 
-- **Auteur** : Thibaut Lombard  
+- **Auteur** : Thibaut Lombard  (contact@lombard-web-services.com)
 - **Entreprise** : Lombard-Web-Services  
 - **Objectif** : Ouvrir des pistes de recherche interdisciplinaires (physique + information + optimisation).
