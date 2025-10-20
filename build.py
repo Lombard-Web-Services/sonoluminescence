@@ -932,6 +932,7 @@ Remerciements:
 Bruno Levy, Frank Nielsen, Gabriel Peyré, Andrew Ng.
 
 AI : Qwen, Grok 4, Gemini, ChatGPT, Perplexity, Mistral Lechat.
+Websites : X.com, Google.com
 \end{document}
 """
 
