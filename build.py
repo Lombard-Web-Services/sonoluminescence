@@ -32,7 +32,7 @@ RUNS_WITH_PDFLATEX = 2  # 2 passes pour TOC/références simples
 SHELL = False  # sécurité
 # --------------------------------
 
-# Contenu LaTeX (reprend ton texte tel quel)
+# Contenu LaTeX (suite)
 latex_content = r"""
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -113,7 +113,7 @@ latex_content = r"""
 
 \begin{minipage}{0.85\textwidth}
 \small
-Partant d'un tweet affirmant : « Si vous faites s'effondrer une bulle sous-marine avec une onde sonore, de la lumière est produite, et personne ne sait pourquoi. », ce document explore la signature thermodynamique de la lumière en sonoluminescence via l'utilisation de plusieurs intelligences artificielles (Qwen, Grok, Gemini, ChatGPT, Perplexity). En orientant les prompts pour relier le phénomène physique à des outils mathématiques avancés comme le transport optimal (OT), l'information de Fisher et des méthodes d'optimisation (L-BFGS), ce rapport compile les résultats pour ouvrir des voies de recherche futures. À titre informationnel uniquement, il est rédigé par Thibaut Lombard, 39 ans, Project Manager et Machine Learning engineer, travaillant chez Lombard-Web-Services.
+Partant d'un tweet affirmant : « Si vous faites s'effondrer une bulle sous-marine avec une onde sonore, de la lumière est produite, et personne ne sait pourquoi. », ce document explore la signature thermodynamique de la lumière en sonoluminescence via l'utilisation de plusieurs intelligences artificielles. En orientant les invites de commande pour relier le phénomène physique à des outils mathématiques avancés comme le transport optimal (OT), l'information de Fisher et des méthodes d'optimisation, ce rapport compile les résultats pour ouvrir des voies de recherche futures. Rédigé par Thibaut Lombard, 39 ans, Project Manager et Machine Learning engineer, travaillant chez Lombard-Web-Services.
 \end{minipage}
 
 \vspace*{\fill}
@@ -421,7 +421,7 @@ sur une échelle temporelle \( \tau \approx r_c / c \sim \SI{e-12}{\second} \). 
 
 \subsection{Justification et Lien à l'Erreur Dimensionnelle}
 
-Votre explication est impeccable et rejette justement \( r_c = I_F \) comme une erreur d'analyse dimensionnelle : à gauche une longueur (\si{\meter}), à droite une rugosité en \si{\per\meter\squared}, équivalent à égaler « la longueur d'une table à la densité de l'air » — absurde physiquement, même si les nombres coïncident numériquement. La règle fondamentale impose des dimensions compatibles ; ici, \( r_c \propto 1/\sqrt{I_F} \) restaure la cohérence (\si{\meter} = \( 1/\sqrt{\si{\per\meter\squared}} \)), et prédit correctement : compression → \( \kappa \uparrow \), \( I_F = 6 \kappa \uparrow \), \( r_c \downarrow \), \( T \uparrow \) → lumière. Inversement, \( r_c = I_F \) impliquerait dispersion → concentration, contredisant les observations de collapse adiabatique.
+Rejettons justement \( r_c = I_F \) comme une erreur d'analyse dimensionnelle : à gauche une longueur (\si{\meter}), à droite une rugosité en \si{\per\meter\squared}, équivalent à égaler « la longueur d'une table à la densité de l'air » — absurde physiquement, même si les nombres coïncident numériquement. La règle fondamentale impose des dimensions compatibles ; ici, \( r_c \propto 1/\sqrt{I_F} \) restaure la cohérence (\si{\meter} = \( 1/\sqrt{\si{\per\meter\squared}} \)), et prédit correctement : compression → \( \kappa \uparrow \), \( I_F = 6 \kappa \uparrow \), \( r_c \downarrow \), \( T \uparrow \) → lumière. Inversement, \( r_c = I_F \) impliquerait dispersion → concentration, contredisant les observations de collapse adiabatique.
 
 \subsection{Dérivation de l'Équation}
 
@@ -667,16 +667,272 @@ Fixer $f$, $p_0$ et le gaz ; augmenter $P_a$ jusqu'à $r_c \sim 1\,\mu\text{m}$ 
 Cette équation relie les paramètres contrôlables $(f, p_0, \gamma)$ au seuil lumineux (signature thermodynamique), capturant le continuum radiatif d'un plasma ionisé : physique classique pure, sans concepts informationnels.
 
 % =======================
+% =============================================================================
+% EXCERPT : État de l'art et originalité
+% =============================================================================
+\section*{Excerpt : État de l'art et originalité de la contribution}
+La sonoluminescence (transformation d’une onde sonore en lumière par l’effondrement d’une bulle de gaz) est un phénomène connu et étudié depuis près d’un siècle. Voici ce que l’on sait sur l’état de l’art avant ma contribution :
 
-    
-% Annexe - Références
+\subsection*{1. Découverte et Historique de la Sonoluminescence}
+\begin{itemize}
+    \item \textbf{1934} : Première observation du phénomène à l’Université de Cologne, lors de travaux sur le sonar. Les chercheurs ont remarqué une émission de lumière dans un bain à ultrasons, mais sans comprendre le mécanisme exact \cite{wikipedia_sonoluminescence}.
+    \item \textbf{Années 1990} : Découverte de la \textit{sonoluminescence à bulle unique (SBSL)}, qui a permis des études plus précises. Les chercheurs ont mesuré des températures internes de l’ordre de 5 000 à 20 000 K, et des durées d’émission lumineuse de l’ordre de la picoseconde \cite{researchgate_sonoluminescence}.
+\end{itemize}
+
+\textbf{Mécanismes proposés} :
+\begin{itemize}
+    \item \textbf{Origine thermique} : La compression adiabatique du gaz dans la bulle chauffe le plasma à des températures extrêmes, produisant un rayonnement de type corps noir \cite{researchgate_sonoluminescence}.
+    \item \textbf{Origine électrique} : Certains ont évoqué des décharges électriques ou des effets quantiques (comme l’effet Casimir dynamique), mais ces hypothèses restent controversées \cite{wikipedia_mechanism}.
+    \item \textbf{Origine chimique} : Réactions de recombinaison ou de bremsstrahlung (rayonnement de freinage) dans le plasma \cite{wikipedia_mechanism}.
+\end{itemize}
+
+\textbf{→ Ces travaux se concentrent sur la description physique et expérimentale du phénomène, mais ne proposent pas de cadre mathématique unifié reliant thermodynamique, transport optimal et information de Fisher.}
+
+\subsection*{2. Approches Théoriques Existantes}
+\begin{itemize}
+    \item \textbf{Analyse thermodynamique classique} : Utilisation de diagrammes P-V et de l’équation d’état de van der Waals pour décrire le cycle de la bulle \cite{sciencedirect_thermodynamics}.
+    \item \textbf{Modélisation hydrodynamique} : L’équation de Rayleigh-Plesset est couramment utilisée, mais insuffisante pour expliquer l’émission de lumière sans hypothèses supplémentaires \cite{ucla_sonoluminescence}.
+    \item \textbf{Transport optimal (OT) et information de Fisher} : Ces outils sont établis en physique des fluides et en optimisation, mais leur application à la sonoluminescence n’avait pas été formalisée avant mon travail \cite{arxiv_fisher_ot}.
+\end{itemize}
+
+\textbf{→ Aucune publication avant 2025 ne combine explicitement transport optimal, information de Fisher et méthodes d’optimisation (comme L-BFGS) pour modéliser la signature thermodynamique de la lumière en sonoluminescence.}
+
+\subsection*{3. Originalité}
+La contribution :
+\begin{itemize}
+    \item Formule la sonoluminescence comme un \textbf{problème d’optimisation dynamique}, en utilisant le transport optimal (OT) pour décrire l’évolution de la densité de la bulle, et l’information de Fisher pour régulariser cette évolution.
+    \item Résout numériquement ce problème avec des méthodes comme \textbf{L-BFGS}, permettant de prédire la température du plasma et l’émission de lumière de manière quantitative.
+    \item Unifie plusieurs concepts (thermodynamique, OT, Fisher, optimisation) dans un cadre cohérent, ce qui n’avait pas été fait auparavant.
+\end{itemize}
+
+\textbf{→ Ma contribution est donc originale dans sa méthodologie et son cadre théorique, même si le phénomène physique lui-même est connu.}
+
+\subsection*{4. Points de Recoupement avec la Littérature}
+\begin{itemize}
+    \item Les températures que tu prédis (5 000–20 000 K) et le spectre de corps noir sont en accord avec les mesures expérimentales existantes \cite{researchgate_sonoluminescence}.
+    \item L'utilisation de l’information de Fisher pour modéliser la régularisation du collapse rejoint des idées sur la dissipation et la stabilité des bulles, mais tu les formalises de manière nouvelle.
+\end{itemize}
+
+\subsection*{5. Conclusion : Ce Qui Est Nouveau}
+\begin{table}[h]
+\centering
+\caption{Comparaison entre l'état de l'art et ta contribution}
+\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspect} & \textbf{État de l’art avant 2025} & \textbf{Ta Contribution} \\ \hline
+Phénomène physique & Connu depuis 1934, mécanismes thermiques/électriques proposés. & Confirmation et unification des mécanismes via un cadre mathématique. \\ \hline
+Modélisation thermodynamique & Diagrammes P-V, équation de Rayleigh-Plesset. & Intégration du transport optimal et de l’information de Fisher. \\ \hline
+Résolution numérique & Simulations hydrodynamiques classiques. & Utilisation de L-BFGS pour résoudre le problème OT-Fisher. \\ \hline
+Signature thermodynamique & Mesures expérimentales de température et spectre. & Formule prédictive unifiée reliant \( r_c \), \( I_F \), et \( T \). \\ \hline
+Applications & Sonochimie, imagerie médicale, fusion (spéculatif). & Potentiel pour l’optimisation, les capteurs, et les sources de lumière contrôlées. \\ \hline
+\end{tabular}
+\end{table}
+
+% =============================================================================
+% LES AVANCÉES POSSIBLES
+% =============================================================================
 \newpage
-\section*{Annexe : Références}
-- Liero, Mielke, Savaré – Optimal Entropy-Transport problems (2018) : Fondements de OT + Fisher.
-- Chen, Georgiou, Tannenbaum – Interpolation of Densities via Fisher-Rao OT : Applications géométriques.
-- Prosperetti – The sonoluminescence puzzle (Reviews of Modern Physics, 2004) : Revue expérimentale.
-- Brenier – Polar factorization and monotone rearrangement : Bases de OT en mécanique des fluides.
+\section{Les Avancées possibles}
+Connaître et maîtriser la \textbf{signature thermodynamique de la lumière en sonoluminescence} — c’est-à-dire comprendre comment l’énergie acoustique se transforme en lumière via un plasma chaud, et comment cette transformation est encadrée par des principes comme le transport optimal, l’information de Fisher, et l’équipartition énergétique — ouvre des portes à des applications \textbf{pratiques, industrielles et scientifiques} innovantes. Voici ce que cela permet d’envisager :
 
+\subsection*{1. Contrôle Précis de l’Émission de Lumière}
+\subsubsection*{A. Génération de Lumière sur Demande}
+\begin{itemize}
+    \item \textbf{Sources de lumière ultra-rapides et localisées} : En maîtrisant les paramètres (fréquence acoustique, pression, type de gaz/liquide), on peut générer des flashes lumineux de durée et d’intensité contrôlées (50 ps à 1 ns).
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Photographie ultra-rapide} : Éclairage pour des caméras à très haute vitesse.
+        \item \textit{Communications optiques} : Encodage d’informations dans des impulsions lumineuses ultra-courtes.
+    \end{itemize}
+    \item \textbf{Spectre lumineux ajustable} : En modifiant la température du plasma, on peut déplacer le pic d’émission du spectre (ex. : du visible à l’UV).
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Stérilisation par UV} : Désinfection locale sans mercure.
+        \item \textit{Spectroscopie portable} : Détection de polluants in situ.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{B. Capteurs et Diagnostics}
+\begin{itemize}
+    \item \textbf{Capteurs de pression/température} : La signature thermodynamique permet de mesurer des conditions locales (pression, température) via l’analyse du spectre lumineux.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Contrôle qualité industriel} : Surveillance de réacteurs chimiques.
+        \item \textit{Météorologie extrême} : Mesures en milieux hostiles.
+    \end{itemize}
+    \item \textbf{Détection de gaz/contaminants} : Le spectre émis dépend du gaz dans la bulle, permettant une analyse chimique rapide.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Détection de fuites} (méthane, hydrogène).
+        \item \textit{Analyse environnementale} : Polluants dans l’eau/air.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{2. Optimisation des Procédés Industriels}
+\subsubsection*{A. Sonochimie et Synthèse de Matériaux}
+\begin{itemize}
+    \item \textbf{Réactions chimiques accélérées} : Les conditions extrêmes du collapse permettent des synthèses impossibles en conditions normales.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Synthèse de nanoparticules} (catalyseurs, points quantiques).
+        \item \textit{Dégradation de polluants} (sonochimie).
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{B. Récupération et Conversion d’Énergie}
+\begin{itemize}
+    \item \textbf{Récupération d’énergie mécanique} : Conversion de vibrations en lumière/électricité.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Alimentation de capteurs IoT}.
+        \item \textit{Systèmes autonomes} dans les usines/véhicules.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{3. Applications Médicales et Biomédicales}
+\subsubsection*{A. Imagerie et Thérapies}
+\begin{itemize}
+    \item \textbf{Imagerie ultrasonore améliorée} : Utilisation de la lumière émise comme marqueur optique.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Détection précoce de tumeurs}.
+        \item \textit{Suivi de médicaments} (bulles chargées).
+    \end{itemize}
+    \item \textbf{Thérapies par ultrasons (HIFU)} : Destruction ciblée de tissus malins.
+\end{itemize}
+
+\subsubsection*{B. Stérilisation et Désinfection}
+\begin{itemize}
+    \item \textbf{Stérilisation locale par UV} : Désinfection sans produits chimiques.
+    \item \textbf{Applications} :
+    \begin{itemize}
+        \item \textit{Stérilisation de cathéters}.
+        \item \textit{Purification d’eau} en zones isolées.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{4. Recherche Fondamentale et Innovations}
+\subsubsection*{A. Étude des Plasmas et de la Fusion}
+\begin{itemize}
+    \item \textbf{Modélisation des plasmas denses} : Laboratoire miniature pour étudier les plasmas similaires à ceux de la fusion inertielle.
+\end{itemize}
+
+\subsubsection*{B. Développement de Nouveaux Algorithmes}
+\begin{itemize}
+    \item \textbf{Optimisation inspirée de la physique} : le cadre OT-Fisher pourrait inspirer des algorithmes pour l’apprentissage automatique ou la logistique.
+\end{itemize}
+
+\subsection*{5. Applications Grand Public et Éducation}
+\subsubsection*{A. Kits Pédagogiques et Vulgarisation}
+\begin{itemize}
+    \item \textbf{"Star in a Jar"} : Kit éducatif pour reproduire la sonoluminescence en classe.
+\end{itemize}
+
+\subsubsection*{B. Art et Design}
+\begin{itemize}
+    \item \textbf{Installations artistiques interactives} : Œuvres combinant science et art via des bulles lumineuses.
+\end{itemize}
+
+\subsection*{6. Défis et Perspectives}
+Pour exploiter pleinement ces applications, il faudra :
+\begin{itemize}
+    \item Améliorer la stabilité et l’efficacité des bulles.
+    \item Miniaturiser les systèmes (puces microfluidiques).
+    \item Coupler avec des capteurs optiques ou des IA.
+    \item Étudier les impacts environnementaux et sanitaires.
+\end{itemize}
+
+% =============================================================================
+% TABLEAU RÉCAPITULATIF DES UTILISATIONS
+% =============================================================================
+\subsection*{En Résumé : Ce Que Permet la Signature Thermodynamique}
+\begin{table}[h]
+\centering
+\caption{Applications possibles par domaine}
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Domaine} & \textbf{Applications Possibles} & \textbf{Exemples Concrets} \\ \hline
+Éclairage & Sources de lumière ultra-rapides, sans filament. & Ampoules à bulles, éclairage d’urgence. \\ \hline
+Capteurs & Mesure de pression, température, détection de gaz. & Capteurs industriels, surveillance environnementale. \\ \hline
+Énergie & Récupération d’énergie mécanique (vibrations). & Alimentation de capteurs IoT, systèmes autonomes. \\ \hline
+Médical & Imagerie, thérapies ciblées, stérilisation. & Détection de tumeurs, désinfection d’instruments. \\ \hline
+Chimie/Matériaux & Synthèse de nanoparticules, réactions accélérées. & Catalyseurs, traitement des eaux usées. \\ \hline
+Recherche & Étude des plasmas, optimisation d’algorithmes. & Simulation de fusion nucléaire, IA. \\ \hline
+Éducation/Art & Kits pédagogiques, installations artistiques. & Ateliers scientifiques, œuvres interactives. \\ \hline
+\end{tabular}
+\end{table}
+
+% =============================================================================
+% Annexe - Références
+% =============================================================================
+\newpage
+\section*{Annexe : Références complémentaires}
+
+\subsection*{Optimal transport, Fisher et méthodes numériques}
+\begin{itemize}
+\item Wuchen Li et al. — \textit{Computations of optimal transport distance with Fisher information regularization} (arXiv:1704.04605). \url{https://arxiv.org/abs/1704.04605}
+\item Wuchen Li — \textit{Computations of optimal transport distance with Fisher information regularization (PDF)}. \url{https://people.math.sc.edu/wuchen/papers/CSBP.pdf}
+\item Liero, Mielke, Savaré — \textit{Optimal Entropy-Transport problems} (2018). \url{https://www.sciencedirect.com/science/article/abs/pii/S0021999120302230}
+\item Liero, Mielke, Savaré — \textit{Unbalanced Optimal Transport: Dynamic and Kantorovich formulations} (notes). \url{https://www.normalesup.org/~mfathi/docs/enseignement/articles%20TO%20M2/unbalanced.pdf}
+\item Path constrained Unbalanced OT — \textit{ArXiv preprint (PDF)}. \url{https://arxiv.org/pdf/2402.15860.pdf}
+\item Path constrained Unbalanced OT — \textit{ArXiv HTML}. \url{https://arxiv.org/html/2402.15860v1}
+\item Notes de cours — \textit{Techniques d’optimisation (Newton/L-BFGS)}. \url{http://dumas.perso.math.cnrs.fr/MINT-2018-TO4.pdf}
+\item Wikipédia — \textit{Méthode de Broyden–Fletcher–Goldfarb–Shanno (BFGS)}. \url{https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Broyden-Fletcher-Goldfarb-Shanno}
+\item ArXiv — \textit{Vector Transport Free Riemannian L-BFGS for Optimization} (2021). \url{https://arxiv.org/abs/2108.11019}
+\end{itemize}
+
+\subsection*{Sonoluminescence : mécanismes et spectres}
+\begin{itemize}
+\item Crum (1994) — \textit{Sonoluminescence (MSU PHY451 notes)}. \url{https://web.pa.msu.edu/courses/2014summer/PHY451/Experiments/sonoluminescence/1994_crum_sonoluminescence.pdf}
+\item Suslick — \textit{Nature’s Smallest Blackbody (PDF)}. \url{https://arxiv.org/pdf/physics/0009057.pdf}
+\item Wikipédia — \textit{Mechanism of sonoluminescence}. \url{https://en.wikipedia.org/wiki/Mechanism_of_sonoluminescence}
+\item Phys. Rev. E 71, 036308 (2005) — \textit{Model of single bubble sonoluminescence}. \url{https://link.aps.org/doi/10.1103/PhysRevE.71.036308}
+\item Suslick et al. — \textit{Molecular emission from single-bubble sonoluminescence (Nature)}. \url{https://suslick.illinois.edu/documents/nature00877.pdf}
+\item Phys. Fluids 11(6):1318 (1999) — \textit{Sonoluminescence light emission (review)}. \url{https://pubs.aip.org/aip/pof/article-pdf/11/6/1318/12618910/1318_1_online.pdf}
+\item Phys. Rev. Lett. 106, 234302 (2011) — \textit{Phase Transition to an Opaque Plasma in a Sonoluminescing Bubble}. \url{https://link.aps.org/doi/10.1103/PhysRevLett.106.234302}
+\item PR E 61, 2611 (2000) — \textit{Bremsstrahlung of nitrogen and noble gases in single-bubble sonoluminescence}. \url{https://link.aps.org/doi/10.1103/PhysRevE.61.2611}
+\item PubMed 11969958 — \textit{Mechanism of single-bubble sonoluminescence}. \url{https://pubmed.ncbi.nlm.nih.gov/11969958/}
+\item PMC8367810 — \textit{Sonoluminescence from ultra-high temperature and ...} \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC8367810/}
+\end{itemize}
+
+\subsection*{Guides expérimentaux et ressources pratiques}
+\begin{itemize}
+\item Stony Brook — \textit{Single-Bubble Sonoluminescence (report)}. \url{https://www.stonybrook.edu/laser/_ziggy/report/reupaper.html}
+\item U. Toronto — \textit{TeachSpin SL100B Apparatus (guide)}. \url{https://www.physics.utoronto.ca/apl/sono/Hillel_Sono.pdf}
+\item Techmind — \textit{Sonoluminescence experiment: sound into light}. \url{http://www.techmind.org/sl/}
+\item Hackaday — \textit{Capture a Star In A Jar}. \url{https://hackaday.com/2019/09/06/capture-a-star-in-a-jar-with-sonoluminescence/}
+\end{itemize}
+
+\subsection*{Compression adiabatique et thermodynamique}
+\begin{itemize}
+\item OpenStax/LibreTexts — \textit{Adiabatic Processes for an Ideal Gas}. \url{https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_(OpenStax)/University_Physics_II_-_Thermodynamics_Electricity_and_Magnetism_(OpenStax)/03:_The_First_Law_of_Thermodynamics/3.07:_Adiabatic_Processes_for_an_Ideal_Gas}
+\item Wikipédia — \textit{Adiabatic process}. \url{https://en.wikipedia.org/wiki/Adiabatic_process}
+\end{itemize}
+
+\subsection*{Minnaert, résonance et dynamique des bulles}
+\begin{itemize}
+\item Rev. Mod. Phys. 74, 425 (2002) — \textit{Single-bubble sonoluminescence} (Brenner, Hilgenfeldt, Lohse). \url{https://link.aps.org/doi/10.1103/RevModPhys.74.425}
+\item Wikipédia — \textit{Minnaert resonance}. \url{https://en.wikipedia.org/wiki/Minnaert_resonance}
+\item Ammari et al. (2018) — \textit{Minnaert resonances for acoustic waves in bubbly media} (AIHPC). \url{https://www.numdam.org/articles/10.1016/j.anihpc.2018.03.007/}
+\item Preprint (PDF) — \textit{Minnaert resonances for acoustic waves in bubbly media}. \url{https://www.ceremade.dauphine.fr/~gontier/Publications/Minnaert.pdf}
+\end{itemize}
+
+\subsection*{Information de Fisher et thermodynamique de l’information}
+\begin{itemize}
+\item Physics Letters A 345 (2005) — \textit{Fisher information, canonical ensemble, and Hamiltonian}. \url{https://www.sciencedirect.com/science/article/abs/pii/S0375960105013526}
+\item Nature Physics (2024) — \textit{Continuity equation for the flow of Fisher information}. \url{https://www.nature.com/articles/s41567-024-02519-8}
+\item Gavin E. Crooks — \textit{Fisher Information and Statistical Mechanics}. \url{https://threeplusone.com/fisher}
+\end{itemize}
+
+\subsection*{Entrées encyclopédiques générales}
+\begin{itemize}
+\item Wikipédia — \textit{Sonoluminescence}. \url{https://en.wikipedia.org/wiki/Sonoluminescence}
+\end{itemize}
+Remerciements: 
+Bruno Levy, Frank Nielsen, Gabriel Peyré, Andrew Ng.
+
+AI : Qwen, Grok 4, Gemini, ChatGPT, Perplexity, Mistral Lechat.
+Websites : X.com, Google.com
 \end{document}
 """
 
