@@ -54,7 +54,7 @@ Le document inclut une **section détaillée (Section 4)** pour reproduire la so
 
 ---
 
-## 📜 Licence
+## 📜 License
 
 Ce document est distribué sous **[MIT License](LICENSE)**.  
 © 2025 Thibaut Lombard — Project Manager & Machine Learning Engineer @ Lombard-Web-Services
