@@ -47,10 +47,7 @@ Le document inclut une **section détaillée (Section 4)** pour reproduire la so
 
 ## 📚 Références clés
 
-- Liero, Mielke, Savaré – *Optimal Entropy-Transport problems* (2018)  
-- Prosperetti – *The sonoluminescence puzzle* (Rev. Mod. Phys., 2004)  
-- Brenier – *Polar factorization and monotone rearrangement*  
-- Frieden – *Physics from Fisher Information*
+Voir liens annexes et remerciements dans le paper.
 
 ---
 
