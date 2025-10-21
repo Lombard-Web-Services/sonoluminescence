@@ -278,7 +278,7 @@ représente la résolution minimale de la localisation due à la pénalité diff
 évitant une concentration infinie et fixant la taille finie (\(\sim \SI{1}{\micro\meter}\) en sonoluminescence)
 où l'énergie se dissipe en chaleur.
 
-La seconde formule dans l'image attachée (\( r_c = I_F(\rho^*) = 6 \kappa \))
+La formule (\( r_c = I_F(\rho^*) = 6 \kappa \))
 semble être une inversion erronée ou une convention alternative
 (peut-être pour une métrique normalisée différemment),
 mais la première est cohérente avec la physique :
