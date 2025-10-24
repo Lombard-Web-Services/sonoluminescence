@@ -719,7 +719,7 @@ La contribution :
 \caption{Comparaison entre l'état de l'art et ta contribution}
 \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 \hline
-\textbf{Aspect} & \textbf{État de l’art avant 2025} & \textbf{Ta Contribution} \\ \hline
+\textbf{Aspect} & \textbf{État de l’art avant 2025} & \textbf{La Contribution} \\ \hline
 Phénomène physique & Connu depuis 1934, mécanismes thermiques/électriques proposés. & Confirmation et unification des mécanismes via un cadre mathématique. \\ \hline
 Modélisation thermodynamique & Diagrammes P-V, équation de Rayleigh-Plesset. & Intégration du transport optimal et de l’information de Fisher. \\ \hline
 Résolution numérique & Simulations hydrodynamiques classiques. & Utilisation de L-BFGS pour résoudre le problème OT-Fisher. \\ \hline
